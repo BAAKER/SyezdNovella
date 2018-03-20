@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 31, in script
+    jump sociclpol2
+ScriptError: could not find label 'sociclpol2'.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 31, in script
+    jump sociclpol2
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\ast.py", line 1573, in execute
+    rv = renpy.game.script.lookup(target)
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\script.py", line 871, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'sociclpol2'.
+
+Windows-8-6.2.9200
+Ren'Py 6.99.14.1.3218
+SyezdNov 1.0
+Tue Mar 20 20:07:56 2018

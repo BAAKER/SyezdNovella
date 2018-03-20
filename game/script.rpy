@@ -1,7 +1,7 @@
 ﻿# Вы можете расположить сценарий своей игры в этом файле.
 
 # Определение персонажей игры.
-define e = Character('Эйлин', color="#c8ffc8")
+define e = Character('Троцкая', color="#c8ffc8")
 
 # Вместо использования оператора image можете просто
 # складывать все ваши файлы изображений в папку images.
@@ -9,14 +9,34 @@ define e = Character('Эйлин', color="#c8ffc8")
 # а eileen happy — "eileen happy.webp", и тогда они появятся в игре.
 
 # Игра начинается здесь:
+
+init 1:
+    $ social_pol = 0
 label start:
 
-    scene bg room
+    scene lenin
 
-    show eileen happy
+    show trotskey angry
 
-    e "Вы создали новую игру Ren'Py."
+    e "Итак, выбирай."
 
-    e "Добавьте сюжет, изображения и музыку и отправьте её в мир!"
-
+    e "Геи люди?"
+    
+    menu:
+        "Да":
+            $ social_pol += 2
+            jump socialpol1
+        "Нет":
+            $ social_pol += 1
+            jump socialpol2
+    label socialpol1:
+        if social_pol == 2:
+            "Социальная политика = 1"
+            return
+    label socialpol2:
+        if social_pol ==2:
+            "Социальная политика = -1"
+        else:
+            "Неверно"
+            return
     return
