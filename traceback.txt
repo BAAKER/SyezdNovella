@@ -1,22 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 31, in script
-    jump sociclpol2
-ScriptError: could not find label 'sociclpol2'.
+  File "game/script.rpy", line 45, in script
+    "Один из таких пабликов, под названием "Революционная Ложа" набирал людей в свою конференцию."
+  File "renpy/common/00library.rpy", line 256, in say
+    who(what, interact=interact, *args, **kwargs)
+Exception: Say has image attributes (u'\u0420\u0435\u0432\u043e\u043b\u044e\u0446\u0438\u043e\u043d\u043d\u0430\u044f', u'\u041b\u043e\u0436\u0430'), but there's no image tag associated with the speaking character.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 31, in script
-    jump sociclpol2
-  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\ast.py", line 1573, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\script.py", line 871, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'sociclpol2'.
+  File "game/script.rpy", line 45, in script
+    "Один из таких пабликов, под названием "Революционная Ложа" набирал людей в свою конференцию."
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\ast.py", line 643, in execute
+    renpy.exports.say(who, what, interact=self.interact, *args, **kwargs)
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\exports.py", line 1174, in say
+    renpy.store.say(who, what, *args, **kwargs)
+  File "renpy/common/00library.rpy", line 256, in say
+    who(what, interact=interact, *args, **kwargs)
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\character.py", line 949, in __call__
+    self.resolve_say_attributes(False, wanted=speaking)
+  File "D:\ренпу\renpy-6.99.14.1-sdk\renpy\character.py", line 845, in resolve_say_attributes
+    raise Exception("Say has image attributes %r, but there's no image tag associated with the speaking character." % (attrs,))
+Exception: Say has image attributes (u'\u0420\u0435\u0432\u043e\u043b\u044e\u0446\u0438\u043e\u043d\u043d\u0430\u044f', u'\u041b\u043e\u0436\u0430'), but there's no image tag associated with the speaking character.
 
 Windows-8-6.2.9200
 Ren'Py 6.99.14.1.3218
 SyezdNov 1.0
-Tue Mar 20 20:07:56 2018
+Wed Mar 21 15:52:04 2018

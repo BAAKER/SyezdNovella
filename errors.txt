@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: if statement expects a non-empty block.
-    if social_pol == 1:
-                       ^
+File "game/script.rpy", line 37: expecting name after dot.
+    "Школьного материала мне не хватало и я хотел большего, поэтому я полез в интернет".
+                                                                                        ^
 
 Ren'Py Version: Ren'Py 6.99.14.1.3218
-Tue Mar 20 19:50:20 2018
+Wed Mar 21 15:50:56 2018
